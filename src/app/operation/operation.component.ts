@@ -161,4 +161,11 @@ export class OperationComponent implements OnInit {
     });
   });
   }
+
+  public soundTest() {
+    this.generalRreceptionSound.play();
+    this.trainingDivisionSound.play();
+    this.systemDevelopmentDepartmentSound.play();
+    this.humanResourcesDepartmentSound.play();
+  }
 }
