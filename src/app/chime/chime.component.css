@@ -1,0 +1,50 @@
+#select-function {
+    width: 1024px;
+    height: 690px;
+}
+
+#select-container {
+    width: 1024px;
+    height: 537px;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.left-content {
+    width: 370px;
+    height: 180px;
+    padding-left: 0px;
+    background-color: #000000cc;
+    color: white;
+    font-size: 35px;
+}
+
+.right-content {
+    width: 370px;
+    height: 180px;
+    padding-left: 0px;
+    background-color: #000000cc;
+    color: white;
+    font-size: 35px;
+}
+
+.left-button {
+    width: 420px;
+    margin-right: 65px;
+    float: right;
+}
+
+.right-button {
+    width: 420px;
+    margin-left: 65px;
+    float: left;
+}
+
+.bottom-button {
+    margin-top: 48px;
+}
+
+.back-button {
+    padding-top: 40px;
+}

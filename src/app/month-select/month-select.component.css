@@ -1,0 +1,46 @@
+#select-button-container {
+    width: 1024px;
+    height: 520px;
+}
+
+.student-select {
+    width: 1024px;
+    height: 150px;
+    text-align: center;
+}
+
+.first-container {
+    width: 1024px;
+    height: 165px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.second-container {
+    width: 1024px;
+    height: 165px;
+    text-align: center;
+}
+
+.right-button {
+    margin-top: 25px;
+    height: 100px;
+    width: 200px;
+    margin-left: 80px;
+}
+
+.left-button {
+    margin-top: 25px;
+    height: 100px;
+    width: 200px;
+}
+
+.back-button {
+    padding-top: 40px;
+}
+
+.on-click {
+    background: #868585fa;
+    color: #ffffff;   
+}

@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-user-select: none;
+    font-weight: bold;
+}
+
+body {
+    font-family: arial, sans-serif;
+    width: 1024px;
+    height: 718px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#main-container {
+    width: 1024px;
+    height: 658px;
+    background-color: rgb(82, 214, 133);
+    background-image: url("./assets/backimage.png");
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+}
+
+#header {
+    width: 1024px;
+    height: 30px;
+    background-color: #84fa97;
+}
+
+#footer {
+    width: 1024px;
+    height: 30px;
+    background-color: #84fa97;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+#back-home-container {
+    width: 1024px;
+    height: 120px;
+    margin-top: 18px;
+    text-align: center;
+}

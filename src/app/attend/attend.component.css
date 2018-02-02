@@ -1,0 +1,34 @@
+p {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+#select-button-container {
+    width: 1024px;
+    height: 520px;
+}
+
+#back-month-container {
+    width: 1024px;
+    height: 120px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.description-area {
+    width: 1024px;
+    height: 67px;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.manner {
+    margin: 0;
+}
+
+.font-size-35 {
+    font-size: 35px;
+}
