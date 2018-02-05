@@ -1,3 +1,11 @@
+p {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
 #select-function {
     width: 1024px;
     height: 690px;
@@ -5,16 +13,15 @@
 
 #select-container {
     width: 1024px;
-    height: 537px;
-    padding-top: 70px;
-    padding-bottom: 120px;
+    height: 458px;
+    padding-top: 30px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
 .left-content {
     width: 370px;
-    height: 180px;
-    padding-left: 0px;
+    height: 150px;
     background-color: #000000cc;
     color: white;
     font-size: 35px;
@@ -22,8 +29,7 @@
 
 .right-content {
     width: 370px;
-    height: 180px;
-    padding-left: 0px;
+    height: 150px;
     background-color: #000000cc;
     color: white;
     font-size: 35px;
@@ -47,4 +53,26 @@
 
 .back-button {
     padding-top: 40px;
+}
+
+.on-click-button:active {
+    background-color: rgba(175, 167, 167, 0.747);
+    color:rgb(114, 109, 109);
+    text-align: center;
+}
+
+.ng-click-button {
+    background-color: rgb(43, 42, 42);
+    color:rgb(70, 70, 70);
+}
+
+.message-area {
+    width: 1024px;
+    height: 80px;
+}
+
+.message {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 18px;
 }

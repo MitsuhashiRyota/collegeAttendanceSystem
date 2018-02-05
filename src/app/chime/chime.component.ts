@@ -12,6 +12,10 @@ export class ChimeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(".on-click-button").on("touchend", function() {
+        $(".on-click-button").removeClass("on-click-button").addClass("ng-click-button");
+        $(".message").html("只今呼び出し中です。<br>その場で少々お待ちください。");
+    });
   }
 
   /**
@@ -22,12 +26,14 @@ export class ChimeComponent implements OnInit {
   public startChime(id: string, startChimeFlg: boolean) {
 
     startChime(id, startChimeFlg);
+    resetStyle();
 
+    /**
+     * チャイム開始メソッド
+     * @param id 
+     * @param startChimeFlg 
+     */
     function startChime (id, startChimeFlg) {
-      console.log(startChimeFlg);
-      console.log(id);
-
-      // 非同期通信
       $.ajax({
         url: 'http://192.168.1.127:8080/chime/start',
         type: 'POST',
@@ -42,6 +48,16 @@ export class ChimeComponent implements OnInit {
           console.log("NG");
         }
       });
+    }
+
+    /**
+     * 呼び出しボタン非活性化
+     */
+    function resetStyle() {
+      setTimeout(function() {
+        $(".ng-click-button").removeClass("ng-click-button").addClass("on-click-button");
+        $(".message").html("<p class='message'><p>");
+    },5000);
     }
   }
 }

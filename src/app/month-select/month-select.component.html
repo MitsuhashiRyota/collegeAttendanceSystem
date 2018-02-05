@@ -1,25 +1,25 @@
 <div id="select-button-container">
   <div class="student-select">
-      <button class="left-button" [(ngModel)]="noonStudent" (click)="changeSelectStudent(true, false)" ngDefaultControl>昼間受講生</button>
-      <button class="right-button" [(ngModel)]="nightStudent" (click)="changeSelectStudent(false, true)" ngDefaultControl>夜間受講生</button>
+      <button class="left-button button-animation" [(ngModel)]="noonStudent" (click)="changeSelectStudent(true, false)" ngDefaultControl ontouchstart="">昼間受講生</button>
+      <button class="right-button button-animation" [(ngModel)]="nightStudent" (click)="changeSelectStudent(false, true)" ngDefaultControl ontouchstart="">夜間受講生</button>
   </div>
   <ng-container *ngIf="noonStudent == true">
     <div class="first-container">
-        <a routerLink="/studentselect/11"><button class="left-button">11月生</button></a>
-        <a routerLink="/studentselect/12"><button class="right-button">12月生</button></a>
+        <a routerLink="/studentselect/11"><button class="left-button button-animation" ontouchstart="">11月生</button></a>
+        <a routerLink="/studentselect/12"><button class="right-button button-animation" ontouchstart="">12月生</button></a>
     </div>
     <div class="second-container">
-        <a routerLink="/studentselect/1"><button class="left-button">1月生</button></a>
+        <a routerLink="/studentselect/1"><button class="left-button button-animation" ontouchstart="">1月生</button></a>
     </div>
   </ng-container>
   <ng-container *ngIf="nightStudent == true">
     <div class="first-container">
-        <a routerLink="/studentselect/10/1"><button class="left-button">10月生</button></a>
-        <a routerLink="/studentselect/11/1"><button class="right-button">11月生</button></a>
+        <a routerLink="/studentselect/10/1"><button class="left-button button-animation" ontouchstart="">10月生</button></a>
+        <a routerLink="/studentselect/11/1"><button class="right-button button-animation" ontouchstart="">11月生</button></a>
     </div>
     <div class="second-container">
-        <a routerLink="/studentselect/12/1"><button class="left-button">12月生</button></a>
-        <a routerLink="/studentselect/1/1"><button class="right-button">1月生</button></a>
+        <a routerLink="/studentselect/12/1"><button class="left-button button-animation" ontouchstart="">12月生</button></a>
+        <a routerLink="/studentselect/1/1"><button class="right-button button-animation" ontouchstart="">1月生</button></a>
     </div>
   </ng-container>
 </div>

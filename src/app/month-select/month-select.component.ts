@@ -38,12 +38,12 @@ export class MonthSelectComponent implements OnInit {
 
     if(this.noonStudent == true) {
       console.log("ok");
-      $(".left-button").prop("disabled", true).addClass("on-click");
-      $(".right-button").prop("disabled", false).removeClass("on-click");
+      $(".left-button").prop("disabled", true);
+      $(".right-button").prop("disabled", false);
     } else if(this.nightStudent == true) {
       console.log("ng");
-      $(".left-button").prop("disabled", false).removeClass("on-click");
-      $(".right-button").prop("disabled", true).addClass("on-click");
+      $(".left-button").prop("disabled", false);
+      $(".right-button").prop("disabled", true);
     }
   }
 }

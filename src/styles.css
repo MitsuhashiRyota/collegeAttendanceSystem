@@ -57,3 +57,10 @@ a {
     margin-top: 18px;
     text-align: center;
 }
+
+.button-animation:hover{
+    text-align: center;
+    border-radius:50px;
+    color:rgb(104,102, 102);
+    background-color: rgba(161, 161, 161, 0.685);
+  } 

@@ -1,16 +1,19 @@
 <div id="select-function">
+    <div class="message-area">
+      <p class="message"></p>
+    </div>
     <div id="select-container">
       <div class="left-button">
-        <button class="left-content" (click)="startChime(2, false)">研修事業部</button>
+        <button class="left-content on-click-button" (click)="startChime(2, false)" ontouchstart="">研修事業部</button>
       </div>
       <div class="right-button">
-        <button class="right-content" (click)="startChime(1, false)">総合受付</button>
+        <button class="right-content on-click-button" (click)="startChime(1, false)" ontouchstart="">総合受付</button>
       </div>
       <div class="left-button">
-          <button class="left-content bottom-button" (click)="startChime(4, false)">人事部</button>
+          <button class="left-content bottom-button on-click-button" (click)="startChime(4, false)" ontouchstart="">人事部</button>
         </div>
         <div class="right-button">
-          <button class="right-content bottom-button" (click)="startChime(3, false)">システム開発部</button>
+          <button class="right-content bottom-button on-click-button" (click)="startChime(3, false)" ontouchstart="">システム開発部</button>
         </div>
     </div>
     <a routerLink="/">
