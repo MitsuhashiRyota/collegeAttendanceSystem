@@ -9,8 +9,8 @@ import * as $ from 'jquery';
 export class MonthSelectComponent implements OnInit {
 
   private radioModel: string = 'Middle';
-  private noonStudent: boolean = false;
-  private nightStudent: boolean = false;
+  public noonStudent: boolean = false;
+  public nightStudent: boolean = false;
 
   private month:number = 11;
 

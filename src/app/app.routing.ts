@@ -8,9 +8,6 @@ import { MonthSelectComponent } from './month-select/month-select.component';
 import { StudentSelectComponent } from './student-select/student-select.component';
 import { AttendComponent } from './attend/attend.component';
 
-// Admin
-import { AdminComponent } from './admin/admin.component';
-
 // chime
 import { ChimeComponent } from "./chime/chime.component";
 
@@ -29,7 +26,6 @@ const myRoutes : Routes = [
     { path: 'studentselect/:month', component: StudentSelectComponent },
     { path: 'studentselect/:month/:nightFlg', component: StudentSelectComponent },
     { path: 'attend', component: AttendComponent },
-    { path: 'admin', component: AdminComponent },
     { path: 'chime', component: ChimeComponent },
     { path: 'functionselect', component: SelectFunctionComponent },
     { path: 'operation', component: OperationComponent },

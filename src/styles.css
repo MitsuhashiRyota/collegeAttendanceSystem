@@ -24,7 +24,6 @@ a {
 #main-container {
     width: 1024px;
     height: 658px;
-    background-color: rgb(82, 214, 133);
     background-image: url("./assets/backimage.png");
     filter:alpha(opacity=50);
     -moz-opacity: 0.8;
