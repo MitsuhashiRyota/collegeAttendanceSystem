@@ -83,7 +83,9 @@ export class StudentSelectComponent implements OnInit {
     let saveParam = new URLSearchParams();
     saveParam.set("collegeStudentId", studentId);
     saveParam.set("isAbsence", String(absenceFlg));
-    saveParam.set("isContact", String(contactFlg));
+    if(contactFlg != null) {
+      saveParam.set("isContact", String(contactFlg));
+    }
     return saveParam;
   }
 
