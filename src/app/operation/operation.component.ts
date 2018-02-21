@@ -89,7 +89,7 @@ export class OperationComponent implements OnInit {
     ) 
     {
       $.ajax({
-        url: 'http://192.168.1.99:8080/chime',
+        url: 'http://192.168.1.99:8080/CollegeAbsenteeSystem/chime',
         type: 'get',
         success: function(result) {
            if(result[0].chimeFlg == 0) {
@@ -153,7 +153,7 @@ export class OperationComponent implements OnInit {
     // Ajax
     $(function() {
       $.ajax({
-        url: 'http://192.168.1.99:8080/chime/stop',
+        url: 'http://192.168.1.99:8080/CollegeAbsenteeSystem/chime/stop',
         type: 'POST',
         data: {
           'stopChimeFlg': $('.stopbutton').val()

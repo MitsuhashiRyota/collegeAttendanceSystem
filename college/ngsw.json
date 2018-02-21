@@ -1,0 +1,53 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/inline.5cb32996049152e93e7c.bundle.js",
+        "/main.8c59d3867034f89be464.bundle.js",
+        "/polyfills.f20484b2fa4642e0dca8.bundle.js",
+        "/styles.9fcce874f7df26a8f7bc.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/backimage.png",
+        "/assets/backimage_2.png",
+        "/assets/error.jpg",
+        "/assets/generalReception.mp3",
+        "/assets/humanResourcesDepartment.mp3",
+        "/assets/icon.png",
+        "/assets/systemDevelopmentDepartment.mp3",
+        "/assets/trainingDivision.mp3"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/inline.5cb32996049152e93e7c.bundle.js": "db0a9d19b7c478cf43550ea1cb36679d2e1e909a",
+    "/assets/backimage.png": "6506eeefaabe35beabad96a12aaad5f4eb8c139f",
+    "/main.8c59d3867034f89be464.bundle.js": "dbf73b316975015cd3ccb53283e059ad759ab013",
+    "/assets/backimage_2.png": "e9d4b98f47db943011163bf50a0be2e3f0fb6eba",
+    "/polyfills.f20484b2fa4642e0dca8.bundle.js": "d76cc4f32bd724990e239dbddea15e2d7313995c",
+    "/assets/error.jpg": "16c86c0a542977888a86dfa556e0a7829dca6971",
+    "/styles.9fcce874f7df26a8f7bc.bundle.css": "597e405b37a74d81d8cce4fdfbec6265cc51c954",
+    "/assets/generalReception.mp3": "290195107400e1add227815f849b41464a299145",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/assets/humanResourcesDepartment.mp3": "ab8e61b32dbeb80e9a9e98ce92e16294fe3a33fa",
+    "/index.html": "52d1700728612945fba5d7801ac97f1eeb24d5f3",
+    "/assets/icon.png": "84a7f2732941520faea0c1402b83614a901d868d",
+    "/assets/systemDevelopmentDepartment.mp3": "73db86452e30b456362a7631ee28faa445d61084",
+    "/assets/trainingDivision.mp3": "32643f45e028c2edc9ed5410a59166be9479b524"
+  }
+}
