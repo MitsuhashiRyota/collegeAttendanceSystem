@@ -38,7 +38,7 @@ export class ChimeComponent implements OnInit {
      */
     function startChime (id, startChimeFlg) {
       $.ajax({
-        url: 'http://192.168.1.127:8080/chime/start',
+        url: 'http://192.168.1.99:8080/chime/start',
         type: 'POST',
         data: {
           "stopChimeFlg": startChimeFlg,
