@@ -30,10 +30,10 @@ export class MonthSelectComponent implements OnInit {
   private monthStudentParameter: MonthStudentParameter = new MonthStudentParameter();
 
   // 表示切替フラグ
-  private displayFlg:number = 0;
+  public displayFlg:number = 0;
 
   // 選択月
-  private selectMonth: string = "0";
+  public selectMonth: string = "0";
 
   constructor(
     private monthSelectService: MonthSelectService,

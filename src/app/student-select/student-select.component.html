@@ -2,11 +2,11 @@
 <div id="select-button-container">
   <div class="description-area">
       <span class="font-size-35">{{month}}月生一覧:{{shortDate | date: 'longDate' }}</span>
-      <input type="checkbox" class="checkbox-param" ([ngModel])="absenceFlg.selected" [value]="absenceFlg" (click)="changeFlg(1)"/><span class="font-size-20">欠席</span>
-      <input type="checkbox" class="checkbox-param"  ([ngModel])="contactFlg.selected" [value]="contactFlg" [disabled]="!absenceFlg" [checked]="contactFlg != null && !contactFlg" (click)="changeFlg(2)" /><span class="font-size-20">連絡なし</span>
+      <input type="checkbox" class="checkbox-param" ([ngModel])="absenceFlg" [value]="absenceFlg" (click)="changeFlg(1)"/><span class="font-size-20">欠席</span>
+      <input type="checkbox" class="checkbox-param"  ([ngModel])="contactFlg" [value]="contactFlg" [disabled]="!absenceFlg" [checked]="contactFlg != null && !contactFlg" (click)="changeFlg(2)" /><span class="font-size-20">連絡なし</span>
   </div>
   <div class="student-container">
-    <ng-container *ngFor="let studentParameter of monthStudentParameter.studentList">
+    <ng-container *ngFor="let studentParameter of monthStudentParameter['studentList']">
       <span *ngIf="!studentParameter.attendance">
           <button class="student-left-button button-animation" (click)="saveAttendRequest(studentParameter.id, absenceFlg, contactFlg)" ngDefaultControl ontouchstart="">{{studentParameter.studentName}}さん</button>
       </span>

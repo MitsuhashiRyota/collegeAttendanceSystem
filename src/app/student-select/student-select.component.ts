@@ -16,13 +16,13 @@ import { AnonymousSubject } from 'rxjs/Subject';
 export class StudentSelectComponent implements OnInit {
 
   // 受講生一覧データ
-  @Input() monthStudentParameter = new EventEmitter<MonthStudentParameter>();
-  
+ // @Input() monthStudentParameter = new EventEmitter<MonthStudentParameter>();
+ @Input() monthStudentParameter:MonthStudentParameter; 
   // 選択月
   @Input() selectMonth = new EventEmitter<string>();
 
   // 選択月表示用
-  private month: number;
+  public month: number;
 
   // 日時
   public shortDate: Date;
@@ -31,7 +31,9 @@ export class StudentSelectComponent implements OnInit {
   public absenceFlg: boolean = false;
 
   // 連絡なしフラグ
-  public contactFlg: any = null;
+  public contactFlg: boolean = null;
+
+  public studentList: MonthStudentParameter;
 
   /**
    * コンストラクタ
@@ -51,7 +53,6 @@ export class StudentSelectComponent implements OnInit {
    * 初期化 
    */
   ngOnInit() {
-    console.log(this.monthStudentParameter);
     this.month = Number(this.selectMonth);
     this.shortDate = new Date();
   }
@@ -62,7 +63,7 @@ export class StudentSelectComponent implements OnInit {
    * @param absenceFlg 
    * @param contactFlg 
    */
-  public saveAttendRequest(studentId: string, absenceFlg:boolean, contactFlg:any): void {
+  public saveAttendRequest(studentId: string, absenceFlg: boolean, contactFlg: boolean): void {
     // Spring RestFullAPI処理
     let apiParameter = 'http://192.168.1.99:8080/CollegeAbsenteeSystem/attendance/postAttendance/';
 
@@ -78,11 +79,11 @@ export class StudentSelectComponent implements OnInit {
    * 登録用パラメータを設定
    * @param studentId 
    */
-  public setSaveParameter(studentId: string, absenceFlg:any, contactFlg:any): URLSearchParams {
+  public setSaveParameter(studentId: string, absenceFlg: boolean, contactFlg: boolean): URLSearchParams {
     let saveParam = new URLSearchParams();
     saveParam.set("collegeStudentId", studentId);
-    saveParam.set("isAbsence", absenceFlg);
-    saveParam.set("isContact", contactFlg);
+    saveParam.set("isAbsence", String(absenceFlg));
+    saveParam.set("isContact", String(contactFlg));
     return saveParam;
   }
 
