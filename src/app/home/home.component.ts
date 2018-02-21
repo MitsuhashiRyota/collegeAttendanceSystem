@@ -10,6 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  /** 
+   * 初期化 
+   */
   ngOnInit() {
     // 要素を点滅
     $(function() {
@@ -20,11 +23,4 @@ export class HomeComponent implements OnInit {
     },500);
     });
   }
-
-  public test() {
-    $(function() {
-      alert("");
-    });
-  }
-
 }

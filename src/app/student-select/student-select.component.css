@@ -45,7 +45,7 @@ h3 {
 }
 
 .student-left-button {
-    margin-top: 25px;
+    margin-top: 35px;
     height: 52px;
     width: 130px;
     margin-left: 30px;
@@ -57,4 +57,14 @@ h3 {
 
 .font-size-35 {
     font-size: 35px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.checkbox-param {
+    transform: scale(2);
+    margin-left: 20px;
+    margin-right: 7px;
 }

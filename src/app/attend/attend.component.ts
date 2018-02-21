@@ -9,11 +9,17 @@ import * as $ from 'jquery';
 })
 export class AttendComponent implements OnInit {
 
+  public attendanceDate: Date;
+
   constructor(
     private router: Router
   ) { }
-
+  
+  /** 
+  * 初期化処理 
+  */
   ngOnInit() {
+    this.attendanceDate = new Date();
     setTimeout(() => {
     this.router.navigate(['mothselect']);
     }, 3000);

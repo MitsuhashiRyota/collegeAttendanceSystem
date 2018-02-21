@@ -38,6 +38,9 @@ export class OperationComponent implements OnInit {
     this.humanResourcesDepartmentSound = new Audio('assets/humanResourcesDepartment.mp3');
    }
 
+   /** 
+    * 初期化処理 
+    */
   ngOnInit() {
     
     this.generalRreceptionSound.load();
@@ -68,7 +71,6 @@ export class OperationComponent implements OnInit {
     {
       var POLLLING_INVERVAL_TIME_IN_MILLIS = 1000;//10s
       (function polling() {
-        console.log('開始');
         checkChimeFlg(
           generalRreceptionSound,
           trainingDivisionSound,
@@ -90,8 +92,7 @@ export class OperationComponent implements OnInit {
         url: 'http://192.168.1.127:8080/chime',
         type: 'get',
         success: function(result) {
-          console.log(result);
-          if(result[0].chimeFlg == 0) {
+           if(result[0].chimeFlg == 0) {
             $('.startSound').val(result[0].id);
             $('.startSound')[0].click();
           } else if(result[1].chimeFlg == 0) {
@@ -112,8 +113,11 @@ export class OperationComponent implements OnInit {
     }
   }
 
+  /**
+   * 音楽再生
+   * @param id 
+   */
   public soundPlay(id: number): void {
-    console.log('サウンド開始');
     this.id = id['target']['value'];
 
     if(this.id == 1) {
@@ -127,6 +131,9 @@ export class OperationComponent implements OnInit {
     }
   }
 
+  /** 
+   * 音楽停止 
+   */
   public stopChime() {
     // 即時音楽を停止
     if(this.id == 1) {
@@ -143,25 +150,26 @@ export class OperationComponent implements OnInit {
       this.humanResourcesDepartmentSound.currentTime = 0;
     } 
 
+    // Ajax
     $(function() {
-      console.log($('.stopbutton').val());
-  
-    $.ajax({
-      url: 'http://192.168.1.127:8080/chime/stop',
-      type: 'POST',
-      data: {
-        'stopChimeFlg': $('.stopbutton').val()
-            },
-      success: function(result) {
-        console.log('OK');
-      },
-      error: function(error) {
-        console.log('NG');
-      }
+      $.ajax({
+        url: 'http://192.168.1.127:8080/chime/stop',
+        type: 'POST',
+        data: {
+          'stopChimeFlg': $('.stopbutton').val()
+              },
+        success: function(result) {
+        },
+        error: function(error) {
+          console.log('NG');
+        }
+      });
     });
-  });
   }
-
+  
+  /** 
+   *  音楽ファイル読み込み処理
+   */
   public soundTest() {
     this.generalRreceptionSound.play();
     this.trainingDivisionSound.play();

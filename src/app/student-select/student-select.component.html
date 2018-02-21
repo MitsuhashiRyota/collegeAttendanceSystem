@@ -1,44 +1,20 @@
+
 <div id="select-button-container">
-    <div class="description-area">
-        <p class="font-size-35">11月生一覧:02月01日</p>
-        <h4 class="manner">名前をタップしていただくと出席となります。</h4>
-    </div>
-      <div class="student-container">
-          <button class="student-left-button button-animation" (click)="insertAttendData()" ngDefaultControl ontouchstart="">田中太郎さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">佐藤幸次さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">加藤正幸さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">遠藤隆司さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">佐藤香さん</button>
-      </div>
-      <div class="student-container">
-          <button class="student-left-button button-animation" ontouchstart="">田中太郎さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">佐藤幸次さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">加藤正幸さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">遠藤隆司さん</button>
-          <button class="student-rigth-button button-animation" ontouchstart="">佐藤香さん</button>
-      </div>
-      <div class="student-container">
-        <button class="student-left-button button-animation" ontouchstart="">田中太郎さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤幸次さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">加藤正幸さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">遠藤隆司さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤香さん</button>
-      </div>
-      <div class="student-container">
-        <button class="student-left-button button-animation" ontouchstart="">田中太郎さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤幸次さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">加藤正幸さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">遠藤隆司さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤香さん</button>
-      </div>
-      <div class="student-container">
-        <button class="student-left-button button-animation" ontouchstart="">田中太郎さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤幸次さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">加藤正幸さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">遠藤隆司さん</button>
-        <button class="student-rigth-button button-animation" ontouchstart="">佐藤香さん</button>
-      </div>
+  <div class="description-area">
+      <span class="font-size-35">{{month}}月生一覧:{{shortDate | date: 'longDate' }}</span>
+      <input type="checkbox" class="checkbox-param" ([ngModel])="absenceFlg.selected" [value]="absenceFlg" (click)="changeFlg(1)"/><span class="font-size-20">欠席</span>
+      <input type="checkbox" class="checkbox-param"  ([ngModel])="contactFlg.selected" [value]="contactFlg" [disabled]="!absenceFlg" [checked]="contactFlg != null && !contactFlg" (click)="changeFlg(2)" /><span class="font-size-20">連絡なし</span>
   </div>
-  <a routerLink="/monthselect/"><div id="back-month-container">    
-    <h3 class="font-size-30 back-button">月へ戻る</h3>
-  </div></a>
+  <div class="student-container">
+    <ng-container *ngFor="let studentParameter of monthStudentParameter.studentList">
+      <span *ngIf="!studentParameter.attendance">
+          <button class="student-left-button button-animation" (click)="saveAttendRequest(studentParameter.id, absenceFlg, contactFlg)" ngDefaultControl ontouchstart="">{{studentParameter.studentName}}さん</button>
+      </span>
+    </ng-container>
+  </div>
+</div>
+<a routerLink="/functionselect">
+  <div id="back-month-container">    
+    <h3 class="font-size-30 back-button">業務選択へ戻る</h3>
+  </div>
+</a>

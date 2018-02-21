@@ -1,28 +1,33 @@
-<div id="select-button-container">
-  <div class="student-select">
-      <button class="left-button button-animation" [(ngModel)]="noonStudent" (click)="changeSelectStudent(true, false)" ngDefaultControl ontouchstart="">昼間受講生</button>
-      <button class="right-button button-animation" [(ngModel)]="nightStudent" (click)="changeSelectStudent(false, true)" ngDefaultControl ontouchstart="">夜間受講生</button>
-  </div>
-  <ng-container *ngIf="noonStudent == true">
-    <div class="first-container">
-        <a routerLink="/studentselect/11"><button class="left-button button-animation" ontouchstart="">11月生</button></a>
-        <a routerLink="/studentselect/12"><button class="right-button button-animation" ontouchstart="">12月生</button></a>
+<ng-container *ngIf="displayFlg; then student"></ng-container>
+<ng-container *ngIf="displayFlg; else month"></ng-container>
+
+<ng-template #month>
+    <div id="select-button-container">
+        <div class="student-select">
+            <button class="left-button button-animation" [(ngModel)]="nightStudent" (click)="changeSelectStudent(0)" ngDefaultControl ontouchstart="">昼間受講生</button>
+            <button class="right-button button-animation" [(ngModel)]="nightStudent" (click)="changeSelectStudent(1)" ngDefaultControl ontouchstart="">夜間受講生</button>
+        </div>
+    <ng-container *ngIf="nightStudent == 0">
+        <div class="first-container">
+            <span *ngFor="let monthParam of monthSelectParameter.monthList;">
+                <button class="left-button button-animation" (click)="studentSelect(monthParam.startMonthYear, monthParam.month)" ontouchstart="">{{monthParam.month}}月生</button>
+            </span>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="nightStudent == 1">
+        <div class="first-container">
+            <span *ngFor="let monthParam of monthSelectParameter.monthList;">
+                <button class="left-button button-animation" (click)="studentSelect(monthParam.startMonthYear, monthParam.month)" ontouchstart="">{{monthParam.month}}月生</button>
+            </span>
+        </div>
+    </ng-container>
     </div>
-    <div class="second-container">
-        <a routerLink="/studentselect/1"><button class="left-button button-animation" ontouchstart="">1月生</button></a>
-    </div>
-  </ng-container>
-  <ng-container *ngIf="nightStudent == true">
-    <div class="first-container">
-        <a routerLink="/studentselect/10/1"><button class="left-button button-animation" ontouchstart="">10月生</button></a>
-        <a routerLink="/studentselect/11/1"><button class="right-button button-animation" ontouchstart="">11月生</button></a>
-    </div>
-    <div class="second-container">
-        <a routerLink="/studentselect/12/1"><button class="left-button button-animation" ontouchstart="">12月生</button></a>
-        <a routerLink="/studentselect/1/1"><button class="right-button button-animation" ontouchstart="">1月生</button></a>
-    </div>
-  </ng-container>
-</div>
-<a routerLink="/"><div id="back-home-container">    
-  <h3 class="font-size-30 back-button">トップへ戻る</h3>
-</div></a>
+    <a routerLink="/">
+        <div id="back-home-container">    
+            <h3 class="font-size-30 back-button">トップへ戻る</h3>
+        </div>
+    </a>
+</ng-template>
+<ng-template #student>
+    <app-student-select [monthStudentParameter]="monthStudentParameter" [selectMonth]="selectMonth"></app-student-select>
+</ng-template>

@@ -4,7 +4,6 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
@@ -18,6 +17,7 @@ import { AttendComponent } from './attend/attend.component';
 import { ChimeComponent } from './chime/chime.component';
 import { SelectFunctionComponent } from './select-function/select-function.component';
 import { OperationComponent } from './operation/operation.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { OperationComponent } from './operation/operation.component';
     AttendComponent,
     ChimeComponent,
     SelectFunctionComponent,
-    OperationComponent
+    OperationComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -17,6 +17,9 @@ import { SelectFunctionComponent } from './select-function/select-function.compo
 // operation
 import { OperationComponent } from './operation/operation.component';
 
+// error
+import { ErrorComponent } from './error/error.component'
+
 /**
  * ルーティング基本設定
  */
@@ -29,6 +32,7 @@ const myRoutes : Routes = [
     { path: 'chime', component: ChimeComponent },
     { path: 'functionselect', component: SelectFunctionComponent },
     { path: 'operation', component: OperationComponent },
+    { path: 'error', component: ErrorComponent },
     { path: '**', redirectTo: '/' }
 ]
 

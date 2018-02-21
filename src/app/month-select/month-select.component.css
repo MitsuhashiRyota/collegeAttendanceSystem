@@ -10,11 +10,12 @@
 }
 
 .first-container {
-    width: 1024px;
-    height: 165px;
+    width: 800px;
+    height: 320px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 110px;
 }
 
 .second-container {
@@ -31,9 +32,10 @@
 }
 
 .left-button {
-    margin-top: 25px;
     height: 100px;
     width: 200px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .back-button {

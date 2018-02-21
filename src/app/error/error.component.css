@@ -1,0 +1,19 @@
+h2 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#error_area {
+    width: 1024px;
+    height: 657px;
+    background-image: url("/assets/error.jpg");
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+}
+
+.error-message {
+    padding-top: 60px;
+    color: red;
+}

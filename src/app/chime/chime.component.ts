@@ -10,7 +10,10 @@ import * as $ from 'jquery';
 export class ChimeComponent implements OnInit {
 
   constructor() { }
-
+  
+  /** 
+   * 初期化処理 
+   */
   ngOnInit() {
     $(".on-click-button").on("touchend", function() {
         $(".on-click-button").removeClass("on-click-button").addClass("ng-click-button");
